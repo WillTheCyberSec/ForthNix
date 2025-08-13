@@ -428,7 +428,7 @@
   </div>
   
   <div id="filter-container">
-    <label for="username-filter">May 26, 2025</label>
+    <label for="username-filter"></label>
     <input type="text" id="username-filter" placeholder="Cari username..." aria-label="Filter username" />
   </div>
   <div class="table-wrapper">
@@ -446,9 +446,9 @@
        
         
         <tr>
-          <td>JovirstK-ID</td>
-          <td>🪙20</td>
-          <td>Rp100.000</td>
+          <td>WillSolace</td>
+          <td>🪙50</td>
+          <td>Rp250.000</td>
           <td>#1</td>
         </tr>
         <tr>
@@ -462,26 +462,6 @@
           <td>🪙7</td>
           <td>Rp35.000</td>
           <td>#3</td>
-        </tr>
-        <tr>
-          <td>WilliamND-ID</td>
-          <td>🪙0</td>
-          <td>Rp0</td>
-          <td>#4</td>
-        </tr>
-        <tr>
-          <td>MatthewG-ID</td>
-          <td>🪙0</td>
-          <td>Rp0</td>
-          <td>#5</td>
-        </tr>
-        <tr>
-          <td>JaysenEmp</td>
-          <td>🪙0</td>
-          <td>Rp0</td>
-          <td>#6</td>
-        </tr>
-       
       </tbody>
     </table>
   </div>
@@ -490,22 +470,11 @@
 <section class="news-section">
   <h2>Berita Terbaru FLR</h2>
 
-  <article class="news-item">
-    <h3>Pembaruan Harga FLR Tetap Stabil</h3>
-    <p class="date">24 Mei 2025</p>
-    <p class="content">Harga FLR saat ini masih berada di angka Rp5.000. Nilai ini akan terus dipantau dan dapat berubah mengikuti perkembangan pasar internal Flarion.</p>
-  </article>
 
   <article class="news-item">
     <h3>Penambahan Fitur Withdraw via WhatsApp</h3>
     <p class="date">24 Mei 2025</p>
     <p class="content">Kini pengguna dapat melakukan withdraw langsung melalui tombol WhatsApp yang tersedia. Fitur ini ditujukan untuk mempercepat proses penarikan FLR.</p>
-  </article>
-
-  <article class="news-item">
-    <h3>FLR Ranking Pertama: JovirstK-ID</h3>
-    <p class="date">24 Mei 2025</p>
-    <p class="content">Selamat kepada JovirstK-ID yang menjadi pengguna dengan jumlah FLR terbanyak saat ini, yaitu 20 FLR atau senilai Rp100.000.</p>
   </article>
 
   <article class="news-item">
@@ -583,7 +552,7 @@
     </div>
   </section>
 <footer>
-  1 FLR = Rp5.000 | FLR hanya digunakan dalam sistem Flarion<br />
+  FLR hanya digunakan dalam sistem Flarion<br />
   © 2025 Flarion Network By ForthNix. All rights reserved.
   <small>Disclaimer: Nilai FLR dapat berubah sewaktu-waktu dan hanya berlaku dalam sistem Flarion.</small>
 </footer>
@@ -689,57 +658,7 @@ const flrChart = new Chart(ctx, {
     }
   }
 });
-
-const totalFLRCanvas = document.createElement('canvas');
-totalFLRCanvas.id = 'totalFLRChart';
-totalFLRCanvas.height = 300;
-document.querySelector('main').insertBefore(totalFLRCanvas, document.getElementById('filter-container'));
-
-const totalFLRChart = new Chart(totalFLRCanvas.getContext('2d'), {
-  type: 'line',
-  data: {
-    labels: [
-      '01/05/25', '02/05/25', '03/05/25', '04/05/25', '05/05/25',
-      '06/05/25', '07/05/25', '08/05/25', '09/05/25', '10/05/25',
-      '11/05/25', '12/05/25', '13/05/25', '14/05/25', '15/05/25',
-      '16/05/25', '17/05/25', '18/05/25', 'Hari ini'
-    ],
-    datasets: [{
-      label: 'Index FLR (Rp)',
-      data: [
-        15000, 20000, 15000, 5000, 30000,
-        55000, 25000, 125000, 50000, 85000,
-        105000, 85000, 55000, 75000, 100000,
-        150000, 210000, 210000, 195000
-      ],
-      fill: true,
-      borderColor: '#2ecc71',
-backgroundColor: 'rgba(46, 204, 113, 0.2)',
-pointBackgroundColor: '#2ecc71',
-      tension: 0
-    }]
-  },
-  options: {
-    responsive: true,
-    plugins: {
-      legend: { display: true },
-      tooltip: {
-        mode: 'index',
-        intersect: false
-      }
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        ticks: {
-          callback: value => 'Rp' + value.toLocaleString()
-        }
-      }
-    }
-  }
-});
   
 </script>
 </body>
 </html>
-
